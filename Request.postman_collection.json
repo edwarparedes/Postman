@@ -1,0 +1,130 @@
+{
+	"info": {
+		"_postman_id": "ef8dd272-bc96-4a65-b99b-9644ff142fc6",
+		"name": "Request",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get requests",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/request",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"request"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Make request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \r\n    \"purchaseRate\": \"3.7\",\r\n    \"sellingRate\": \"4\",    \r\n    \"amount\": \"20\",\r\n    \"payMode\": \"Yanki\",\r\n    \"sellerBuyer\": \"950246815\",\r\n    \"sellerPhone\": \"9502468147\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/request/makerequest",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"request",
+						"makerequest"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete request",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/request/62212af152270137fd6de103",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"request",
+						"62212af152270137fd6de103"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Validate request",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "localhost:8012/request?requestId=62212b6e52270137fd6de104&status=accept",
+					"host": [
+						"localhost"
+					],
+					"port": "8012",
+					"path": [
+						"request"
+					],
+					"query": [
+						{
+							"key": "requestId",
+							"value": "62212b6e52270137fd6de104"
+						},
+						{
+							"key": "status",
+							"value": "accept"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Transfer yanki",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"phoneSend\": \"950246815\",\r\n    \"phoneReceive\": \"9502468147\",\r\n    \"amount\": 5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8012/request/transferYanki",
+					"host": [
+						"localhost"
+					],
+					"port": "8012",
+					"path": [
+						"request",
+						"transferYanki"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
